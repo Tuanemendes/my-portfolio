@@ -4,40 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./assets/style.css">
     <title>My Portifolio</title>
 </head>
 
 <body>
     <header>
-        <div>
-            <div>
+        <div class="container__menu">
+            <div class="menu__name">
                 <img src="./assets/img/auto_awesome_black.png" alt="estrelas">
                 <h4>Tuane Mendes</h4>
             </div>
-            <div>
-                <nav>
-                    <li>
-                        <a href="#">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#">Hobies</a>
-                    </li>
-                    <li>
-                        <a href="#">Formação</a>
-                    </li>
-                    <li>
-                        <a href="#">Projetos</a>
-                    </li>
-                    <li>
-                        <a href="#">tuane.belmiro@gmail.com</a>
-                    </li>
-                </nav>
-            </div>
+    
+            <span class="material-symbols-outlined menu__icon " onclick="clickMenu()">
+                menu</span>
+            <nav class="menu__nav" id="menu">
+                <a class="menu__nav__a" href="#">Sobre</a>
+                <a class="menu__nav__a"href="#">Skills</a>
+                <a class="menu__nav__a" href="#">Hobbies</a>
+                <a class="menu__nav__a" href="#">Formação</a>
+                <a class="menu__nav__a" href="#">Projetos</a>
+                <a class="menu__nav__a" href="#">tuane.belmiro@gmail.com</a>
+            </nav>
         </div>
-
     </header>
     <main>
         <section>
@@ -57,8 +48,23 @@
         <section>
             <div>
                 <h2>Sobre</h2>
-                <p>Eu sou formada em Sistemas de Informação e atualmente estou participando no projeto Oracle ONE na
-                    Alura.</p>
+                <p>
+
+                    Sou uma desenvolvedora web com o foco em front-end, mas com conhecimentos em back-end, formada em
+                    Sistemas de Informação e apaixonada pela área de tecnologia. Busco constantemente conhecimento e
+                    soluções para enfrentar os desafios de um cenário em constante evolução.<br>
+
+                    Atuei como estágiária em programação web em uma empresa de gestão hopitalar,onde participei de
+                    projetos desafiadores, como o desenvolvimento do portal do colaborador na correção de bugs, projeto
+                    gestão de custos que alguns implementei testes unitários e correções. Além disso, mantenho um ritmo
+                    de produção de um projeto por semana. No meu GitHub, você pode encontrar projetos como um jogo da
+                    memória, site de currículos para pessoas estudando serviços de cloud, implementados utilizando AWS
+                    (CloudFront e S3)e controle de finaças pessoais o Finlibert.<br>
+
+                    Estou determinada a crescer pessoal e profissionalmente, adaptando-me às demandas do mercado em
+                    constante mudança. Minhas experiências anteriores me forneceram habilidades sólidas em comunicação e
+                    foco. Estou animada para enfrentar novos desafios e contribuir para equipes talentosas.
+                </p>
             </div>
         </section>
         <section>
@@ -110,10 +116,22 @@
         </section>
 
     </main>
-    <footer>
-
+    <footer class="footer">
+        <span> &copy; Copyright My-Portifolio by Tuane Mendes - 2023</span>
+        <a href="https://www.linkedin.com/in/tuane-mendes/" target="blank">
+            <img class='c-footer_icon'
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                alt="Linkedin" />
+        </a>
+        <br>
+        <a href="https://github.com/Tuanemendes" target="blank">
+            <img class='c-footer_icon'
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+                alt="Github" />
+        </a>
 
     </footer>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
