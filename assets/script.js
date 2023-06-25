@@ -1,5 +1,5 @@
 
 function clickMenu() {
-    const menu = document.querySelector('#menu');
+    const menu = document.getElementById('menu');
     menu.classList.toggle('active');
 }
