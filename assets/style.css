@@ -57,7 +57,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-image: linear-gradient(to right, var(--gray-dark) 40%, var(--purple));
+    background-image: url(../assets/img/bg-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 80px 100px 50px 80px;
 }
 
@@ -116,6 +119,10 @@ body {
     font-size: 20px;
     margin-bottom: 50px;
     text-align: justify;
+}
+
+.sobre__assinatura {
+    font-family: 'Alex Brush', cursive;
 }
 
 .container__skills__hobbies {
@@ -200,20 +207,22 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.formacao img{
+.formacao img {
 
 
-  align-items: center;
- 
-    
+    align-items: center;
+
+
 }
+
 .formacao h3 {
     text-align: center;
     margin-top: 100px;
     color: var(--gray-dark);
     font-size: 16px;
 }
-.formacao p{
+
+.formacao p {
     text-align: center;
     color: var(--gray-dark);
     font-size: 14px;
