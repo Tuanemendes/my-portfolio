@@ -1,0 +1,21 @@
+.container__about-me {
+    margin: 50px 0px 50px 0px;
+    padding: 20px;
+    background-color: var(--gray-light);
+  }
+  
+  .container__about-me h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+
+  }
+  
+  .container__about-me p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+  }
+
+.about-me__assinatura {
+    font-family: 'Alex Brush', cursive;
+  }

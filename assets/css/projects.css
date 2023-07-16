@@ -1,0 +1,8 @@
+.container__projects{
+
+    color: var(--gray-light);
+  }
+  .projects__item img{
+    width: 400px ;
+  }
+  

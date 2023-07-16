@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 25px 100px 25px 100px;
-    background-color: var(--black-red);
+    background-color: var(  --purple);
     color: var(--gray-light);
 }
 
@@ -17,6 +17,9 @@
     font-size: 26px;
 }
 
+.header__name img{
+    filter: drop-shadow(0 0 0.3em #6c122982);
+}
 .header__icon {
     display: none;
 }

@@ -1,0 +1,15 @@
+.footer {
+    background-color: var(--purple);
+    color: var(--gray-light);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+  }
+  
+  .c-footer_icon {
+    margin: 8px;
+    width: 24px;
+  }
