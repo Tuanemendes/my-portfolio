@@ -1,0 +1,30 @@
+.container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 100px 25px 100px;
+    background-color: var(--black-red);
+    color: var(--gray-light);
+}
+
+.header__name {
+    display: flex;
+    align-items: center;
+}
+  
+.header__name h4 {
+    margin: 0 10px;
+    font-size: 26px;
+}
+
+.header__icon {
+    display: none;
+}
+  
+.header__nav__a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--gray-light);
+    margin-right: 1rem;
+    font-size: 20px;
+}
