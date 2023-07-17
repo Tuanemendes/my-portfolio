@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-   
     padding: 80px 100px 50px 80px;
   }
   
@@ -24,7 +23,7 @@
     transition: 0.5s;
     text-align: center;
     color: var(--gray-light);
-    width: 100px;
+    width: 100px; 
   }
   
   .container__perfil a:hover {
