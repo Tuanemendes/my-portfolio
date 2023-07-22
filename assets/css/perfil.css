@@ -44,4 +44,7 @@
   .container__perfil img {
     border-radius: 50%;
     width: 300px;
+    height: 300px;
+  
+    box-shadow: 3px 6px 6px rgba(189, 106, 197, 0.499);
   }

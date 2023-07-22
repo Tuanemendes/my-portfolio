@@ -33,18 +33,20 @@
 .projects__description{
   margin: 20px;
   padding: 50px;
+  text-align: center;
 }
 
 .projects__description h2{
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 20px;
   color: var(--pink-light);
+  text-align: center;
 }
 .projects__description p{
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 20px;
+  text-align: justify;
 }
-
 
 .btn-projetc{
     display: inline-block;
