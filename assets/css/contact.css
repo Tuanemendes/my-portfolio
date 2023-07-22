@@ -65,3 +65,42 @@ button[type="submit"]:hover {
 	color: var(--gray-light);
 	transition: 0.5s;
 }
+
+@media screen and (max-width: 768px) {
+    .container__contact {
+        flex-direction: column; 
+        padding: 30px; 
+    }
+
+    .container__contact img {
+       display: none;
+    }
+
+    .contact__form {
+        padding: 10px; 
+    }
+
+    .contact__form h2 {
+        font-size: 24px; 
+    }
+
+    .contact__form p {
+        font-size: 18px; 
+        margin-bottom: 10px; 
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    input,
+    textarea {
+        width: 100%; 
+    }
+
+    button[type="submit"] {
+        width: auto; 
+    }
+}
