@@ -1,47 +1,68 @@
-.container__contact{
+
+
+.container__contact {
     display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	margin: 0 160px;
 
 }
 
-.contact__img{
-    margin-left: 100px;
+.container__contact img {
+    max-width: 400px;
+	height: 508px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+    
 }
 
-.contact__img img{
-    width: 400px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+.contact__form {
+    padding: 20px;
+	
 }
 
-.contact__form{
-		width: 600px;
-		padding: 50px;
-		margin-right: 100px;
-		background-color: var(--black-red);
-		color: var(--gray-light);
-		border: none;
-		border-top-right-radius: 8px;
-		border-bottom-right-radius: 8px;
-}
-.contact__form h2{
-		text-align: center;
-		margin-bottom: 20px;
+.contact__form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.contact__form p{
-		margin-bottom: 10px;
+.contact__form p {
+    margin-bottom: 20px;
 }
 
-.contact__form form{
+form {
     display: flex;
     flex-direction: column;
-		border: none;
-		margin-top: 5px;
 }
 
-.contact__form form textarea{
-    
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	
+
+}
+
+textarea {
     resize: none;
+}
+
+button[type="submit"] {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+    text-align: center;
+    color: var(--pink);
+    width: 120px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--pink);
+	color: var(--gray-light);
+	transition: 0.5s;
 }
