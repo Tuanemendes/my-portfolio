@@ -46,3 +46,39 @@
     transform: scale(1.1);
     transition: 0.5s;
 }
+
+
+@media screen and (max-width: 768px) {
+    .container__academic__education {
+        padding: 30px; 
+    }
+
+    .container__academic__education h1 {
+        font-size: 28px; 
+    }
+
+    .academic__education {
+        flex-direction: column; 
+    }
+
+    .academic {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .academic img {
+        margin: 25px auto; 
+    }
+
+    .academic__description {
+        text-align: center; 
+    }
+
+    .academic__description h3 {
+        font-size: 20px; 
+    }
+
+    .academic__description p {
+        font-size: 16px; 
+    }
+}
