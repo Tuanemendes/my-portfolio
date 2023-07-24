@@ -48,7 +48,6 @@
     box-shadow: 3px 6px 6px rgba(189, 106, 197, 0.499);
   }
 
-
 @media screen and (max-width: 768px) {
   .container__perfil {
     padding: 70px 20px 0px 20px; 

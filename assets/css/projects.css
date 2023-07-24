@@ -110,8 +110,7 @@
 
 @media screen and (max-width: 768px) {
   .container__projects {
-      padding: 50px; 
-      
+      padding: 50px;  
   }
 
   .container__projects h1 {
