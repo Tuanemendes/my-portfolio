@@ -3,22 +3,35 @@ function clickMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
 }
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
 
-document.querySelector('[data-submit]').addEventListener('click', function() {
+  document.querySelector('[data-submit]').addEventListener('click', function() {
     // Obter os valores dos campos do formulário usando data attributes
     var name = document.querySelector('[data-name]').value;
     var email = document.querySelector('[data-email]').value;
     var subject = document.querySelector('[data-subject]').value;
     var message = document.querySelector('[data-message]').value;
-    
-    if (name && email && subject && message) {
-       
-        document.querySelector('[data-contact]').style.display = 'none';
-        document.querySelector('[data-thank-message]').style.display = 'block';
-    } else {
-        alert('Por favor, preencha todos os campos do formulário.');
+
+    if (!email) {
+      alert('Por favor, preencha o campo de e-mail.');
+      return; 
     }
-});
+
+    if (!isValidEmail(email)) {
+      alert('Por favor, insira um e-mail válido.');
+      return; 
+    }
+
+    if (name && subject && message) {
+      document.querySelector('[data-contact]').style.display = 'none';
+      document.querySelector('[data-thank-message]').style.display = 'block';
+    } else {
+      alert('Por favor, preencha todos os campos do formulário.');
+    }
+  });
 
 
   document.addEventListener('DOMContentLoaded', function() {
