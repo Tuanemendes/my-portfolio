@@ -3,63 +3,80 @@ function clickMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
 }
+
+function limitarNome(event) {
+    const maxCaracteres = 50;
+    const inputNome = event.target;
+
+    if (inputNome.value.length > maxCaracteres) {
+      inputNome.value = inputNome.value.slice(0, maxCaracteres);
+    }
+}
+
+function limitarAssunto(event) {
+    const maxCaracteres = 50;
+    const inputAssunto = event.target;
+
+    if (inputAssunto.value.length > maxCaracteres) {
+      inputAssunto.value = inputAssunto.value.slice(0, maxCaracteres);
+    }
+}
+
 function isValidEmail(email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-  }
+}
 
-  document.querySelector('[data-submit]').addEventListener('click', function() {
-    // Obter os valores dos campos do formulário usando data attributes
-    var name = document.querySelector('[data-name]').value;
-    var email = document.querySelector('[data-email]').value;
-    var subject = document.querySelector('[data-subject]').value;
-    var message = document.querySelector('[data-message]').value;
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('[data-name]').value;
+    const email = document.querySelector('[data-email]').value;
+    const subject = document.querySelector('[data-subject]').value;
+    const message = document.querySelector('[data-message]').value;
 
     if (!email) {
       alert('Por favor, preencha o campo de e-mail.');
-      return; 
+      return;
     }
 
     if (!isValidEmail(email)) {
       alert('Por favor, insira um e-mail válido.');
-      return; 
+      return;
     }
 
     if (name && subject && message) {
       document.querySelector('[data-contact]').style.display = 'none';
       document.querySelector('[data-thank-message]').style.display = 'block';
+      sendFormData(document.querySelector('[data-form]'));
     } else {
       alert('Por favor, preencha todos os campos do formulário.');
     }
-  });
+  }
 
+  function sendFormData(form) {
+    const formData = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', form.action, true);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          form.style.display = 'none';
+          document.querySelector('[data-thank-message]').style.display = 'block';
+        } else {
+          alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+        }
+      }
+    };
+    xhr.send(formData);
+  }
 
   document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('[data-form]');
     const submitButton = document.querySelector('[data-submit]');
-    const thankMessage = document.querySelector('[data-thank-message]');
+    const contactForm = document.querySelector('[data-form]');
 
-    submitButton.addEventListener('click', function(event) {
-      event.preventDefault();
-      sendFormData(contactForm);
-    });
-
-    function sendFormData(form) {
-      const formData = new FormData(form);
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', form.action, true);
-      xhr.setRequestHeader('Accept', 'application/json');
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            form.style.display = 'none';
-            thankMessage.style.display = 'block';
-          } else {
-            alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
-          }
-        }
-      };
-      xhr.send(formData);
-    }
+    submitButton.addEventListener('click', handleSubmit);
+    document.querySelector('[data-name]').addEventListener('input', limitarNome);
+    document.querySelector('[data-subject]').addEventListener('input', limitarAssunto);
   });
-
