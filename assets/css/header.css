@@ -2,10 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 100px 25px 100px;
+    padding: 20px 100px 25px 100px;
     background-color: var(  --purple);
-    color: var(--gray-light);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    z-index: 9999;
+    
 }
+
+
 
 .header__name {
     display: flex;
@@ -15,6 +23,7 @@
 .header__name h4 {
     margin: 0 10px;
     font-size: 26px;
+    color: var(--gray-light);
 }
 
 .header__name img{
@@ -22,6 +31,7 @@
 }
 .header__icon {
     display: none;
+    color: var(--gray-light);
 }
   
 .header__nav__a {
@@ -32,15 +42,81 @@
     font-size: 20px;
 }
 
+@media screen and (max-width: 968px) {
+    .container__header {
+        padding: 15px 20px; 
+        justify-content: space-between;
+    }
+    .header__nav {
+        display: none;
+        position: absolute;
+        top: 90%;
+        right: 0;
+        background-color: var(--gray-light);
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+      }
+      .header__nav.active {
+        display: block;
+      }
+      .header__nav__a {
+        display: block;
+        text-decoration: none;
+        color: var(--gray-dark);
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+    .header__icon {
+        display: block; 
+        cursor: pointer;
+        font-size: 24px; 
+        margin-left: auto; 
+    }
+  
+}
+
+
 @media screen and (max-width: 768px) {
     .container__header {
-        flex-direction: column;
-        padding: 25px 20px; 
+        padding: 15px 20px; 
+        justify-content: space-between;
     }
 
     .header__name h4 {
         font-size: 22px; 
     }
+
+    .header__nav {
+        display: none;
+        position: absolute;
+        top: 90%;
+        right: 0;
+        background-color: var(--gray-light);
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+      }
+      .header__nav.active {
+        display: block;
+      }
+      .header__nav__a {
+        display: block;
+        text-decoration: none;
+        color: var(--gray-dark);
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+      /* .container__menu {
+        display: flex;
+        align-items: center;
+        padding: 20px 16px 20px 16px;
+        position: relative;
+      } */
+
+
 
     .header__icon {
         display: block; 

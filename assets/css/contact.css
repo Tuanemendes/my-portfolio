@@ -49,7 +49,7 @@ textarea {
     resize: none;
 }
 
-button[type="submit"] {
+button[type="button"] {
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
@@ -60,10 +60,17 @@ button[type="submit"] {
     width: 120px;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
     background-color: var(--pink);
 	color: var(--gray-light);
 	transition: 0.5s;
+}
+.contact__thank-message{
+    color: var(--gray-light);
+    font-size: 24px;
+    text-align: center;
+    padding: 40px;
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -100,8 +107,15 @@ button[type="submit"]:hover {
         width: 100%; 
     }
 
-    button[type="submit"] {
+    button[type="button"] {
         width: auto; 
+    }
+
+    .contact__thank-message{
+       
+        font-size: 20px;
+        
+        
     }
 }
 
