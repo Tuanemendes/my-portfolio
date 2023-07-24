@@ -17,7 +17,7 @@
 <h2>💻 Descrição do Projeto</h2>
 
 <p>
-Criação de um web site responsivo de portifólio    
+Criação de um web site responsivo de portifólio, onde o desenvolvedor front-end pode exibir suas informações pessoais, habilidades, projetos e meios de contato. É uma ótima forma de apresentar suas capacidades e trabalhos realizados no campo de desenvolvimento web front-end.
 </p>
 
 <h2>💻Tecnologias Utilizadas</h2>
@@ -33,9 +33,20 @@ Criação de um web site responsivo de portifólio
 <h2>💻Detalhes do Projeto</h2>
 
 <p>
+Este projeto  representa a estrutura de um portfólio pessoal ,consiste em várias seções, cada uma com um propósito específico. 
+    
+O corpo principal é dividido em várias seções, como "Sobre mim", "Habilidades", "Hobbies", "Educação Acadêmica", "Projetos" e "Contato". Cada seção possui um conteúdo descritivo e, em alguns casos, ícones relacionados
+
+Foi utilizado fontes externas sendo importadas do Google Fonts e do Devicons, que fornecem ícones utilizados no projeto.
+
 
 ![image](https://github.com/Tuanemendes/my-portfolio/assets/54903202/ebfa95fe-fa1d-4468-b07b-8f733ac2b42e)
-   
+
+
+
+Para o envio do email de messagem foi utilizado o  [Formspree](https://formspree.io/) é um serviço de backend para formulários de contato em sites estáticos. Ele permite que desenvolvedores adicionem formulários de contato em seus sites sem a necessidade de configurar um servidor backend para processar os dados do formulário.
+   ![image](https://github.com/Tuanemendes/my-portfolio/assets/54903202/1036cae0-37a9-48b9-99ca-c45fb1d29d0a)
+
           
 </p>
 
