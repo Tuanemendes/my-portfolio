@@ -52,6 +52,7 @@ textarea {
 button[type="button"] {
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--black);
@@ -60,10 +61,11 @@ button[type="button"] {
     width: 120px;
 }
 
-button[type="button"]:hover {
-    background-color: var(--pink);
-	color: var(--gray-light);
-	transition: 0.5s;
+.error-message{
+    color: var(--gray-light);
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
 }
 .contact__thank-message{
     color: var(--gray-light);

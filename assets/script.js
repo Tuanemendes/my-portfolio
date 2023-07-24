@@ -27,6 +27,20 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
+function verificarCamposPreenchidos() {
+    const campos = document.querySelectorAll('[data-name], [data-email], [data-subject], [data-message]');
+    let todosPreenchidos = true;
+
+    campos.forEach((campo) => {
+      if (!campo.value.trim()) {
+        todosPreenchidos = false;
+      }
+    });
+
+    const botaoEnviar = document.querySelector('[data-submit]');
+    botaoEnviar.disabled = !todosPreenchidos;
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -34,6 +48,14 @@ function isValidEmail(email) {
     const email = document.querySelector('[data-email]').value;
     const subject = document.querySelector('[data-subject]').value;
     const message = document.querySelector('[data-message]').value;
+
+    const errorMessage = document.querySelector('.error-message');
+    if (!email || !isValidEmail(email) || !name || !subject || !message) {
+      errorMessage.style.display = 'block';
+      return;
+    }
+
+    errorMessage.style.display = 'none';
 
     if (!email) {
       alert('Por favor, preencha o campo de e-mail.');
@@ -71,12 +93,19 @@ function isValidEmail(email) {
     };
     xhr.send(formData);
   }
-
   document.addEventListener('DOMContentLoaded', function() {
-    const submitButton = document.querySelector('[data-submit]');
-    const contactForm = document.querySelector('[data-form]');
+    document.querySelector('[data-name]').addEventListener('input', verificarCamposPreenchidos);
+    document.querySelector('[data-email]').addEventListener('input', verificarCamposPreenchidos);
+    document.querySelector('[data-subject]').addEventListener('input', verificarCamposPreenchidos);
+    document.querySelector('[data-message]').addEventListener('input', verificarCamposPreenchidos);
 
+
+    const submitButton = document.querySelector('[data-submit]');
     submitButton.addEventListener('click', handleSubmit);
+
+    verificarCamposPreenchidos();
     document.querySelector('[data-name]').addEventListener('input', limitarNome);
     document.querySelector('[data-subject]').addEventListener('input', limitarAssunto);
   });
+
+ 
