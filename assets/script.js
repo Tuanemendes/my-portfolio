@@ -10,17 +10,12 @@ document.querySelector('[data-submit]').addEventListener('click', function() {
     var email = document.querySelector('[data-email]').value;
     var subject = document.querySelector('[data-subject]').value;
     var message = document.querySelector('[data-message]').value;
-
-    // Simulação do envio do email (pode ser implementado no servidor)
+    
     if (name && email && subject && message) {
-        // Aqui você pode adicionar o código para enviar o email para o servidor
-        // Neste exemplo, apenas exibiremos a mensagem de agradecimento
-
-        // Ocultar o formulário e exibir a mensagem de agradecimento
+       
         document.querySelector('[data-contact]').style.display = 'none';
         document.querySelector('[data-thank-message]').style.display = 'block';
     } else {
-        // Se algum campo estiver vazio, exibir um alerta ou mensagem de erro
         alert('Por favor, preencha todos os campos do formulário.');
     }
 });
