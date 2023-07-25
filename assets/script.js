@@ -49,29 +49,23 @@ function verificarCamposPreenchidos() {
     const subject = document.querySelector('[data-subject]').value;
     const message = document.querySelector('[data-message]').value;
 
-    const errorMessage = document.querySelector('.error-message');
-    if (!email || !isValidEmail(email) || !name || !subject || !message) {
-      errorMessage.style.display = 'block';
-      return;
-    }
-
-    errorMessage.style.display = 'none';
-
     if (!email) {
       alert('Por favor, preencha o campo de e-mail.');
       return;
     }
-
     if (!isValidEmail(email)) {
       alert('Por favor, insira um e-mail válido.');
       return;
     }
+    
 
     if (name && subject && message) {
       document.querySelector('[data-contact]').style.display = 'none';
       document.querySelector('[data-thank-message]').style.display = 'block';
       sendFormData(document.querySelector('[data-form]'));
+
     } else {
+
       alert('Por favor, preencha todos os campos do formulário.');
     }
   }

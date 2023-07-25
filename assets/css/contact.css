@@ -61,12 +61,6 @@ button[type="button"] {
     width: 120px;
 }
 
-.error-message{
-    color: var(--gray-light);
-    font-size: 16px;
-    text-align: center;
-    padding: 10px;
-}
 .contact__thank-message{
     color: var(--gray-light);
     font-size: 24px;
