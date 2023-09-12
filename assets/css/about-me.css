@@ -17,9 +17,9 @@
     padding: 30px;
   }
 
-.about-me__assinatura {
-    font-family: 'Alex Brush', cursive;
-  }
+  .about-me__assinatura {
+      font-family: 'Alex Brush', cursive;
+    }
 
 @media screen and (max-width: 768px) {
   .container__about-me {
@@ -36,6 +36,6 @@
   }
 
   .about-me__assinatura {
-    font-size: 20px; 
+    font-size: 20px;
   }
 }
